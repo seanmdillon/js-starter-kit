@@ -9,3 +9,4 @@
 
 ## Debugging via Sourcemaps
 
+add "debugger;" to your code where you want it to stop, you can see it in Inspect in devtools.
