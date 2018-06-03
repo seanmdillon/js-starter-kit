@@ -139,3 +139,17 @@ Also supports object spread | .
     }
   }
 ```
+
+## Linting : Wrap-Up
+
+1. Why Lint?
+- Enforce consistency
+- Avoid mistakes
+1. We chose ESLint
+1. Configuration choices
+- Config format
+- Which rules?
+- Warnings vs errors?
+- Which plugins?
+- Use preset instead?
+1. ESLint runs automatically
