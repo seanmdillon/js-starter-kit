@@ -101,7 +101,8 @@ Full-featured | No unnecessary complexity
 
 ## What belongs in your starter kit
 
-1. Package Management
+1. [Package Management](PackageManagement.md)
+1. [EditorConfig](EditorConfig.md)
 1. Bundling
 1. MinificationSourcemaps
 1. Transpiling
@@ -109,7 +110,7 @@ Full-featured | No unnecessary complexity
 1. Centralized HTTP
 1. Mock API Framework
 1. Component Libraries
-1. Development Webserver
+1. [Development Webserver](DevelopmentWebServer.md)
 1. Linting
 1. Automated Testing
 1. Continuous Integration
