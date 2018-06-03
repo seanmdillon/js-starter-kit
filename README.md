@@ -103,6 +103,7 @@ Full-featured | No unnecessary complexity
 
 1. [Package Management](PackageManagement.md)
 1. [EditorConfig](EditorConfig.md)
+1. [Automation](Automation.md)
 1. Bundling
 1. MinificationSourcemaps
 1. Transpiling
