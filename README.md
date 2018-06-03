@@ -113,7 +113,7 @@ Full-featured | No unnecessary complexity
 1. Mock API Framework
 1. Component Libraries
 1. [Development Webserver](DevelopmentWebServer.md)
-1. Linting
+1. [Linting](Linting.md)
 1. Automated Testing
 1. Continuous Integration
 1. Automated build
