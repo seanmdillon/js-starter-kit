@@ -105,7 +105,8 @@ Full-featured | No unnecessary complexity
 1. [EditorConfig](EditorConfig.md)
 1. [Automation](Automation.md)
 1. [Bundling](Bundling.md)
-1. MinificationSourcemaps
+1. Minification
+1. [Sourcemaps](Sourcemaps.md)
 1. [Transpiling](Transpilers.md)
 1. Dynamic HTML Generations
 1. Centralized HTTP
