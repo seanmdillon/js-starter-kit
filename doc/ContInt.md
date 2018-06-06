@@ -10,14 +10,14 @@
 1. Didn't run tests before commiting
 1. CI server catches mistakes quickly
 
-## What Does a CI Server Do?
+## What Does a CI Server Do
 
 1. Run Automated build
 1. Run your tests
 1. Check code coverage
 1. Automate deployment
 
-## Continuous Integration
+## CI Engines
 
 1. Travis CI. runs on linux
 1. Appveyor. runs on windows
@@ -28,7 +28,7 @@
 
 ## Demo on Travis CI
 
-Needed to sync my GitHub account w/ TravisCI website (http://travis-ci.org). It asked for me to login to GitHub and sync account.
+Needed to sync my GitHub account w/ TravisCI website [http://travis-ci.org](http://travis-ci.org). It asked for me to login to GitHub and sync account.
 
 Note, if you want to do CI on private repo's you need a commercial Travis account ($$$).
 
@@ -50,7 +50,7 @@ I then went and fixed the error, ran the tests locally on my machine, verified s
 
 After Travis was configured correctly, then went to Appveyor to get build going.
 
-Setup new account on Appveyor, also had to integrate w/ GitHub so give it creds and authorize. 
+Setup new account on Appveyor, also had to integrate w/ GitHub so give it creds and authorize.
 
 Once done, go to js-starter-kit repo and add it to Appveyor as project.
 
@@ -83,5 +83,3 @@ test_scrpt:
 # Don't actually build.
 build: off
 ```
-
-

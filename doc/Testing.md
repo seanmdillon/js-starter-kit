@@ -1,4 +1,4 @@
-# Testing 
+# Testing
 
 ## Three major areas to discuss
 
@@ -120,3 +120,17 @@ Run upon save | Often run on demand, in QA, etc.
 1. Where to run tests - NODE
 1. Where to place tests - ALONGSIDE
 1. When to run tests - UPON SAVE
+
+## WRAP UP
+
+1. Testing frameworks
+- Mocha, Jasmine, AVA, Tape, jest
+1. Assertion libraries
+- Chai, Expect
+1. Helper libraries
+- JSDOM, Cheerio
+1. Where to run tsts
+- Browser, headless, in memor
+1. Where to place test, and when to run
+1. Continuous Integration
+- Travis CI, Appveyor, Jenkins
