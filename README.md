@@ -101,21 +101,21 @@ Full-featured | No unnecessary complexity
 
 ## What belongs in your starter kit
 
-1. [Package Management](PackageManagement.md)
-1. [EditorConfig](EditorConfig.md)
-1. [Automation](Automation.md)
-1. [Bundling](Bundling.md)
+1. [Package Management](doc/PackageManagement.md)
+1. [EditorConfig](doc/EditorConfig.md)
+1. [Automation](doc/Automation.md)
+1. [Bundling](doc/Bundling.md)
 1. Minification
-1. [Sourcemaps](Sourcemaps.md)
-1. [Transpiling](Transpilers.md)
+1. [Sourcemaps](doc/Sourcemaps.md)
+1. [Transpiling](doc/Transpilers.md)
 1. Dynamic HTML Generations
 1. Centralized HTTP
 1. Mock API Framework
 1. Component Libraries
-1. [Development Webserver](DevelopmentWebServer.md)
-1. [Linting](Linting.md)
-1. Automated Testing
-1. Continuous Integration
+1. [Development Webserver](doc/DevelopmentWebServer.md)
+1. [Linting](doc/Linting.md)
+1. [Automated Testing](doc/Testing.md)
+1. [Continuous Integration](doc/ContInt.md)
 1. Automated build
 1. Automated deployment
 1. Working example app
