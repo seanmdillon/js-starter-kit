@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 34485773,
+      "firstName": "Zane",
+      "lastName": "Von",
+      "email": "Gino_Jaskolski40@yahoo.com"
+    },
+    {
+      "id": 18228342,
+      "firstName": "Gussie",
+      "lastName": "Donnelly",
+      "email": "Hipolito61@hotmail.com"
+    },
+    {
+      "id": 32464170,
+      "firstName": "Cedrick",
+      "lastName": "Donnelly",
+      "email": "Casandra_McCullough18@gmail.com"
+    },
+    {
+      "id": 52888060,
+      "firstName": "Jada",
+      "lastName": "Wintheiser",
+      "email": "Roma35@gmail.com"
+    }
+  ]
+}
