@@ -109,8 +109,8 @@ Full-featured | No unnecessary complexity
 1. [Sourcemaps](doc/Sourcemaps.md)
 1. [Transpiling](doc/Transpilers.md)
 1. Dynamic HTML Generations
-1. Centralized HTTP
-1. Mock API Framework
+1. [Centralized HTTP](doc/MockHTTP.md)
+1. [Mock API Framework](doc/MockHTTP.md)
 1. Component Libraries
 1. [Development Webserver](doc/DevelopmentWebServer.md)
 1. [Linting](doc/Linting.md)
@@ -118,7 +118,8 @@ Full-featured | No unnecessary complexity
 1. [Continuous Integration](doc/ContInt.md)
 1. Automated build
 1. Automated deployment
-1. Working example app
+1. [Working example app](doc/ProjectStructure.md)
+1. [Production builds](doc/ProductionBuild.md)
 
 ## HERE'S THE PLAN
 
@@ -128,3 +129,4 @@ Full-featured | No unnecessary complexity
 ## SYNONYMS
 
 1. This beginning JavaScript dev environment can be called "starter kit", "seed", "boilerplate", etc.
+
