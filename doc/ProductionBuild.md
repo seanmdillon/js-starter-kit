@@ -321,4 +321,140 @@ module: {
   ]
 }
 ```
+
 - it's important to note we don't need the style loader anymore so we replace it.
+
+## Production Error Logging
+
+A bunch of different types oif error logging systems
+
+1. Track.js
+1. Sentry
+1. New Relic
+1. Raygun
+
+### JS Error Logging: What to Look For
+
+1. error metadata
+- browser
+- stack trace
+- previous actions
+- cutom api for enhanced tracking
+1. notifications and integrations
+1. analytics and filtering
+1. pricing
+
+### Do a demo using Track.js
+
+Lets setup error tracking using his preferred error tracking service. It's easy to setup, has configurable notifications and has a web-based interface.
+
+To get started we need to sign up on their website. After you signup on their site, there are two lines of code you need to inject into your production app: (past this into the HEAD of our index.html before anythign else.)
+
+```html
+<!-- BEGIN TRACKJS -->
+<script type="text/javascript">windows._trackJs = { token: 'xxxxxxxxxxxxxxxxxx' };</script>
+<script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+<!-- END TRACKJS -->
+```
+
+Tracker logs errors automatically, but to verify it's working let's try it manually. You can track an error from anywhere in your application, or in your developer console:
+
+```javascript
+trackJs.track('ahoy trackjs!');
+```
+
+## Now we're talking about templates in the Javascript
+
+### Using EJS - Embedded JavaScript
+
+[embeddedjs.com](http://www.embeddedjs.com)
+
+Like ERB, JavaScript between <% %> is executed. JavaScript between <%= %> adds HTML to the result.
+
+Type HTML or JavaScript in the template. Watch as your chages update the result
+
+```HTML
+<h1><%= title %></h1>
+```
+
+```HTML
+<ul>
+  <% for (var i=0; i<supplies.length; i++) { %>
+    <li><%= supplies[i] %></li>
+  <% } %>
+</ul>
+```
+
+Now, using EJS, we're going to assign our trackjs token to a variable in the webpackplugin object and check for it in index.html. If it exists, we'll then output the javascript code to include the trackjs object in the javascript ```<SCRIPT/>``` tag of the page, if it doesn't exist it won't be output. We'll also replace the hard coded token value in index.html with the variable TrackJSToken in webpackplugin. This way, our errors are only tracked for production!
+
+Another note, the index.html *could* have the extension replaced w/ ```.ejs``` in order to indicate it's an EJS template, but pluralsite author prefers html for IDE, etc., and therefore puts a comment in the header of the html file to indicate (see below)
+
+First, assign the token in webpack.config.prod.js:
+
+```javascript
+    ...
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      },
+      inject: true,
+      // Properties you define here are avialab ein index.html
+      // using hemlWebpackPlugin.options.varName
+      trackJSToken: '0ade03736a2c44b781697a057b7a3a24'
+    }),
+    ...
+```
+
+... then the changes to the index.html page ...
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+<!-- BEGIN TRACKJS -->
+<!--<script type="text/javascript">window._trackJs = { token: '0ade03736a2c44b781697a057b7a3a24' };</script>-->
+<script type="text/javascript">window._trackJs = { token: '<%=htmlWebpackPlugin.options.trackJSToken%>' };</script>
+<script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+<!-- END TRACKJS -->
+    <% } %>
+    <meta charset="UTF-8">
+  </head>
+```
+
+Comment on the index.html file indicating it's an EJS template
+
+```html
+<!--
+  **NOTE:** This is a template for index.html
+  It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment.
+  htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles
+  to this file. The generated bundles have has-based filenames, so it's necessary to add the 
+  references dynamically. For more info on ejs, see http://www.embeddedjs.com/.
+  For examples of using it with htmlWebpackPlugin, see
+  https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
+-->
+```
+
+## SUMMARY
+
+In this module, we wrapped up the dev environment by making a robust production build process. We used
+
+1. Minification
+1. Sourcemaps
+1. Minified HTML and dynamic script tags
+1. Cache busting
+1. Bundle splitting
+1. Error logging
+1. Dynamic HTML via EmbeddedJS

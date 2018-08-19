@@ -40,7 +40,10 @@ export default {
         minifyCSS: true,
         minifyURLs: true
       },
-      inject: true
+      inject: true,
+      // Properties you define here are avialab ein index.html
+      // using hemlWebpackPlugin.options.varName
+      trackJSToken: '0ade03736a2c44b781697a057b7a3a24'
     }),
 
     // Use CommonsChunkPlugin to create a separate bundle of vendor
