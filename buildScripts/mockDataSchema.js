@@ -15,10 +15,11 @@ export const schema = {
           },
           "firstName": {
             "type": "string",
-            "faker": "name.firstName"
+            "faker": "name.lastName"
           },
           "lastName": {
             "type": "string",
+            //"faker": "name.firstName"
             "faker": "name.lastName"
           },
           "email": {

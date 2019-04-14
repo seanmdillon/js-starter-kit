@@ -41,13 +41,13 @@ export default {
         minifyURLs: true
       },
       inject: true,
-      // Properties you define here are avialab ein index.html
-      // using hemlWebpackPlugin.options.varName
+      // Properties you define here are available in index.html
+      // using htmlWebpackPlugin.options.varName
       trackJSToken: '0ade03736a2c44b781697a057b7a3a24'
     }),
 
     // Use CommonsChunkPlugin to create a separate bundle of vendor
-    // libraries to that they're cached separatelyu.
+    // libraries to that they're cached separately.
     // btw, without THIS the vendor libraries would be in the main bundle as well
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
